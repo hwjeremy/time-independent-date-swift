@@ -13,5 +13,5 @@ systems which supply dates independent of time.
 ## Contact
 
 Comments, pull requests, and issues are welcome on GitHub
-[hugh_jeremy on X/Twitter](https://x.com/hugh_jeremy)
-[Hugh Jeremy on LinkedIn](https://au.linkedin.com/in/hugh-jeremy-2932a140)
+- [hugh_jeremy on X/Twitter](https://x.com/hugh_jeremy)
+- [Hugh Jeremy on LinkedIn](https://au.linkedin.com/in/hugh-jeremy-2932a140)
