@@ -150,6 +150,19 @@ final class TimeIndependentDateTests: XCTestCase {
         return
 
     }
+    
+    func testToString() throws {
+        
+        let date1 = try TimeIndependentDate(year: 2020, month: .january, day: 1)
+        let yearFirst = "2020-01-01"
+        let dayFirst = "01-01-2020"
+        
+        XCTAssert(date1.toString(encodingOrder: .dayFirst) == dayFirst)
+        XCTAssert(date1.toString(encodingOrder: .yearFirst) == yearFirst)
+        
+        return
+        
+    }
 
 
 }

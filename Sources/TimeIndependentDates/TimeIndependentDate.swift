@@ -71,7 +71,14 @@ Time independent day out of bounds. Min value 1, max value for month \
         return
     }
     
+    /// A `String` representation of this `TimeIndependentDate` with
+    /// .yearFirst` encoding order.
     public var description: String { get {
+        return self.toString(encodingOrder: .yearFirst)
+    } }
+    
+    /// Return a `String` representation of this `TimeIndependentDate`
+    public func toString(encodingOrder: EncodingOrder) -> String {
         
         func zeroPad(_ number: Int, expectedDigits: Int) -> String {
             
@@ -89,9 +96,14 @@ Time independent day out of bounds. Min value 1, max value for month \
         let month = zeroPad(self.month.rawValue, expectedDigits: 2)
         let day = zeroPad(self.day, expectedDigits: 2)
         
-        return "\(year)-\(month)-\(day)"
+        switch encodingOrder {
+        case .dayFirst:
+            return "\(day)-\(month)-\(year)"
+        case .yearFirst:
+            return "\(year)-\(month)-\(day)"
+        }
 
-    } }
+    }
     
     public enum EncodingOrder {
         case yearFirst
