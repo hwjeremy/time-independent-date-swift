@@ -38,13 +38,14 @@ public struct TimeIndependentDate: Equatable, Comparable, Hashable,
         
         guard year >= 1000 && year <= 9999 else {
             throw TimeIndependentDateError("""
-Time independent date year out of bounds. Max value 9999, min value 1000.
+Time independent date year "\(year)" out of bounds. Max value 9999, min value \
+ 1000.
 """)
         }
 
         guard day >= 1 && day <= month.maxDaysGiven(year: year) else {
             throw TimeIndependentDateError("""
-Time independent day out of bounds. Min value 1, max value for month \
+Time independent day "\(day)" out of bounds. Min value 1, max value for month \
 \(month.maxDaysGiven(year: year)) given month
 """)
         }
