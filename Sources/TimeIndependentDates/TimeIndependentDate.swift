@@ -283,6 +283,8 @@ could not be interpreted as an integer number.
             .november,
             .december
         ]
+        
+        public var integer: Int { return self.rawValue }
             
         public var name: String {
             switch self {
